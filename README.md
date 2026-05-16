@@ -33,7 +33,13 @@ chmod +x health_monitor.sh
 
 **View the generated report:**
 ```bash
-cat Critical_Report.txt
+cat ~/projects/health-monitor/Critical_Report.txt
+```
+
+**Automate the script (Daily at Midnight):**
+```bash
+crontab -e
+0 0 * * * /bin/bash ~/projects/health-monitor/health_monitor.sh
 ```
 
 ---
